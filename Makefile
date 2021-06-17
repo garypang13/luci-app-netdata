@@ -32,7 +32,5 @@ define Package/$(PKG_NAME)/install
 	cp -pR ./web $(1)/usr/share/netdata/web
 endef
 
-include $(TOPDIR)/feeds/luci/luci.mk
-
-# call BuildPackage - OpenWrt buildroot signature
+$(eval $(call BuildPackage,$(PKG_NAME)))
 
